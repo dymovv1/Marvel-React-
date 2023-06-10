@@ -1,0 +1,118 @@
+@function toRem($value) {
+  $rem-value: $value / 16;
+  @return $rem-value * 1rem;
+}
+
+
+.comics {
+  padding-bottom: 50px;
+
+  &-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-title {
+    display: inline-flex;
+    background: #e62429;
+    margin-bottom: 50px;
+    padding: 5px;
+    animation-name: comicsTitle;
+    position: relative;
+    top: -60px;
+    animation-duration: 3.2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: default;
+  }
+  @keyframes comicsTitle {
+    0% {
+      top: -60;
+    }
+    60% {
+      padding-left: 25px;
+      padding-right: 25px;
+
+    }
+    100% {
+      padding-right: 0;
+      padding-left: 0;
+      top: -20px;
+    }
+
+  }
+
+  .comics-body {
+    &.animate-body {
+      animation-name: comicsBody;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-play-state: running;
+      animation-fill-mode: none;
+      position: relative;
+    }
+  }
+
+  @keyframes comicsBody {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+
+  }
+
+  @media screen and (max-width: 600px){
+    @keyframes comicsTitle {
+      0% {
+        top: -60;
+      }
+      100% {
+        padding-right: 0;
+        padding-left: 0;
+        top: -20px;
+      }
+
+    }
+
+  }
+  &-title:hover {
+    animation-play-state: paused;
+  }
+  &-body {
+    text-align: center;
+    background: #151515;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  &-text__title {
+    font-size: toRem(22);
+    margin-bottom: 20px;
+  }
+  &-text__paragraph {
+    font-size: toRem(17);
+    margin-bottom: 20px;
+    width: 91%;
+
+    &:nth-of-type(7) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media  screen and (max-width: 768px){
+  h1,h2,h3 {
+    text-align: center;
+    font-size: toRem(21);
+  }
+
+}

@@ -1,0 +1,96 @@
+@function toRem($value) {
+  $rem-value: $value / 16;
+  @return $rem-value * 1rem;
+}
+
+.games {
+  padding-bottom: 100px;
+  &-bg {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    background-image: url("../../assets/img/games_bg.svg");
+    border-radius: 5px;
+    flex-wrap: wrap;
+    padding: 30px 10px 30px 10px;
+  }
+  &-title {
+    background: #e62429;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    max-width: 200px;
+  }
+}
+
+.card {
+  &-title {
+    font-size: toRem(20);
+  }
+  &-img {
+    width: 200px;
+    height: 280px;
+    transition: all 0.25s;
+    border-radius: 5px;
+  }
+  &-img:hover {
+    cursor: zoom-in;
+    box-shadow: 0 0 5px 2px brown;
+  }
+  &-text {
+    max-width: 250px;
+  }
+}
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: toRem(50);
+  color: #fff;
+  cursor: pointer;
+}
+.modal .modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 4px;
+}
+.modal-open {
+  animation: modalOpenAnimation 0.3s ease;
+}
+
+@keyframes modalOpenAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  .games-bg {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+}

@@ -1,0 +1,147 @@
+@function toRem($value) {
+  $rem-value: $value / 16;
+  @return $rem-value * 1rem;
+}
+
+.list {
+  padding-bottom: 50px;
+  &-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  &-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  &-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background: #496cb3;
+    gap: 5px;
+    border-radius: 10px;
+    opacity: 0.85;
+    transition: all 0.25s;
+    cursor: pointer;
+    max-width: 260px;
+    text-align: center;
+  }
+  &-card:hover {
+    opacity: 1;
+    box-shadow: 0 0 10px 1px #4b3bff;
+  }
+}
+.modal-card {
+  padding: 15px 45px 15px 45px;
+  border-radius: 10px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 9999;
+  overflow-y: auto;
+  max-width: 100%;
+  max-height: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.modal-close {
+  background: #e84040;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 15px;
+  transition: all 0.25s;
+}
+
+.try {
+  transition: all 0.25s;
+
+}
+
+.card {
+  &-img {
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 5px;
+  }
+  &-name {
+    font-family: monospace;
+    margin-bottom: 10px;
+    font-size: toRem(17);
+  }
+  &-text {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &-title {
+    background: #ffffff;
+    color: #0d0202;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    transition: all 0.25s;
+  }
+  &-title:hover {
+    opacity: 0.75;
+  }
+}
+
+.pages-select {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #496cb3;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &-btn {
+    padding: 5px 15px;
+    background: #496cb3;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+select {
+  outline: none;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.25s;
+}
+select:hover {
+  filter: drop-shadow(2px 4px 6px #0d0202);
+}

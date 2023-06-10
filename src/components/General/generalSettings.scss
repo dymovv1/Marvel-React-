@@ -1,0 +1,39 @@
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,ol,a {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #f7f5f5;
+  transition: all 0.3s;
+  //background: rgb(194,23,23);
+  //background: linear-gradient(0deg, rgba(194,23,23,1) 0%, rgba(15,13,13,1) 50%);
+}
+::selection{
+  background-color: #e62429;
+  color: #ffffff;
+}
+
+button {
+  all: unset;
+}
+
+
+
+

@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.4",
     "bulma": "^0.9.4",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
@@ -21,7 +24,9 @@
     "react-router-dom": "^6.11.2",
     "sass": "^1.63.3",
     "slick-carousel": "^1.8.1",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "@react-buddy/ide-toolbox": "^2.3.1",
+    "@react-buddy/palette-mui": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

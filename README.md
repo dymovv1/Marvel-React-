@@ -28,11 +28,11 @@ Start the development server with the command: npm start.
 Contributing
 If you'd like to contribute to this project, please follow these guidelines:
 
-1.Fork the repository and create a new branch.
-2.Make your desired changes.
-3.Test your changes to ensure they work as expected.
-4.Submit a pull request detailing the changes you've made.
-5.We appreciate your contributions!
+1. Fork the repository and create a new branch.
+2. Make your desired changes.
+3. Test your changes to ensure they work as expected.
+4. Submit a pull request detailing the changes you've made.
+5. We appreciate your contributions!
 
 License
 This project is licensed under the MIT License.
